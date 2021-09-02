@@ -1,6 +1,6 @@
 # Pre-Assesment Amwell JS
 
-Please check the code here: [here](./pre-assestsment-code.md)
+Please check the code here: [here](./pre-assestsment-code.js)
 
 ## Suggest improvements
 
