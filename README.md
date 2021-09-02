@@ -40,7 +40,7 @@ Please check the code here: [here](./pre-assestsment-code.js)
 
     **Initial implementation:**
 
-    Executes a cycle where in every iteration send the position in the Fibonacci series to calculate (in a recursive method) the value in that position and to identificate if that value is greater than the param number
+    Executes a cycle wherein every iteration sends the position in the Fibonacci series to calculate (in a recursive method) the value in that position and to evaluate if that value is greater than the param number
     After that, it evaluates if every greater Fibonacci value is prime.
 
     Value: 20
@@ -52,7 +52,7 @@ Please check the code here: [here](./pre-assestsment-code.js)
 
     **With refactor:**
 
-    Executes a recursive method to generate the fibonacci serie from one to a prime value greater than the param number.
+    Executes a recursive method to generate the Fibonacci series from one to a prime value greater than the param number.
 
     Value: 20
     Time of execution: **14.434ms**
