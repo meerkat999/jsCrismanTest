@@ -1,34 +1,23 @@
-var ispnum = function(num) {
-    for(var i = 2; i < num; i++)
-      if  (num % i === 0) return false;
-    return num > 1;
-};
+"use-strict";
 
-const fibonacci = (num) => {
-    if (num <= 1)return 1;
-  return fibonacci(num - 1) + fibonacci(num - 2);
-};
-
-function nxtPrmFib(number) {
-    let r = 0;
-    let l = 1;
-    while (true) {
-        var fib = fibonacci(l);
-        console.log('fib', fib, number);
-        if (fib > number) {
-            if (ispnum(fib)) {
-                r = fib;
-                break;
-                } else {
-                    l = l + 1;    
-                    console.warn('bumping to ', fib);
-                }
-            } else {
-                l = l + 1;
-                console.warn('bumping to', fib);
-            }
+const isPrime = (paramNumber) => {
+  for (let i = 2; i < paramNumber; i++) {
+    if (paramNumber % i === 0) {
+      return false;
     }
-    console.warn('Next prime fib ', r);
-}
+  }
+  return paramNumber > 1;
+};
 
-nxtPrmFib(20);
+const nextPrimeFibonacci = (paramNumber, fibCurrent = 1, fibNext = 1) => {
+  if (fibCurrent > Number.MAX_SAFE_INTEGER) {
+    throw Error("Error max Integer or it could be infinity");
+  }
+  if (fibCurrent > paramNumber && isPrime(fibCurrent)) {
+    return fibCurrent;
+  }
+  console.log("bumping to", fibCurrent + fibNext);
+  return nextPrimeFibonacci(paramNumber, fibCurrent + fibNext, fibCurrent);
+};
+
+console.warn("Next prime fib ", nextPrimeFibonacci(20));
